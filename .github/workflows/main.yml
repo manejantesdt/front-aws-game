@@ -26,7 +26,6 @@ jobs:
         with:
           node-version: "16.x"
           check-latest: true
-          if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
       - run: npm install
       - run: npm run build #
       - run: npm run deploy
